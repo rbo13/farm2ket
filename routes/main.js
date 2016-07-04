@@ -62,8 +62,6 @@ router.get('/cart', function(req, res, next) {
     .exec(function(err, foundCart) {
       if (err) return next(err);
 
-      console.log(foundCart);
-
       res.render('main/cart', {
         foundCart: foundCart,
         message: req.flash('remove')
